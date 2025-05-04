@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/aboutUs.css" />
+    <!-- Icon Page -->
+    <link rel="icon" href="../Images/logoTap.jpg" />
+    <title>Accountiva</title>
+    <!-- Icons Liberary -->
+    <script
+      src="https://kit.fontawesome.com/bbda8ae88d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap Liberary -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Jquery Liberary -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Splide Liberary to swip -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
+    <!-- INITIALIZE AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- \\\ INITIALIZE AOS /// -->
+    <script>
+      /* BUT Sniper When load Page */
+      $(window).on("load", function () {
+        $("#loading").hide();
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Loading Page Spiner -->
+    <div id="loading">
+      <img
+        id="loading-image"
+        src="../Images/logoPage.png"
+        loading="lazy"
+        alt="Loading..."
+      />
+    </div>
+    <!-- Header Page Section -->
+    <header>
+      <!-- Location Company -->
+      <div
+        class=""
+        style="
+          width: 50%;
+          display: flex;
+          justify-content: flex-start;
+          column-gap: 15px;
+        "
+      >
+        <!-- Email Company -->
+        <div class="emailCom">
+          <span><i class="fas fa-envelope"></i> info@accountiva.co</span>
+        </div>
+        <!-- Phone Company -->
+        <div class="phoneCom">
+          <span><i class="fas fa-phone"></i> +9715016132</span>
+        </div>
+      </div>
+      <div class="btn-download">
+        <a
+          href="../File/Accountiva Profile.pdf"
+          download="Accountiva_Profile.pdf"
+        >
+          <button type="button" class="btn">Download Profile</button>
+        </a>
+      </div>
+    </header>
+    <!-- Nav Page Section -->
+    <nav>
+      <ul class="menuMobil">
+        <li><a href="../index.html">Hdome</a></li>
+        <li><a href="../Pages/aboutUs.html">About Us</a></li>
+        <li><a href="../Pages/services.html">Service</a></li>
+        <li><a href="../Pages/contactUs.html">Contact Us</a></li>
+      </ul>
+      <div class="wrapperNav">
+        <div class="logoPage">
+          <a href="../index.html">
+            <img src="../Images/logoPage.png" loading="lazy" alt="logo" />
+            <span>Accountiva</span>
+          </a>
+        </div>
+        <div class="linksPage">
+          <span class="showMenu">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+          <span class="hideMenu d-none">
+            <i class="fa-solid fa-xmark"></i>
+          </span>
+          <ul class="menuTap">
+            <li><a href="../index.html">Home</a></li>
+            <li class="activeTap">
+              <a href="../Pages/aboutUs.html">About Us</a>
+            </li>
+            <li><a href="../Pages/services.html">Service</a></li>
+            <li><a href="../Pages/contactUs.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Container page -->
+    <div class="containerr">
+      <!-- Who We Are  -->
+      <section class="contentAboutSec" style="padding-top: 30px">
+        <!-- Title Page Section  -->
+        <div
+          class="titlePage"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+        >
+          <span>Who We Are ?</span>
+        </div>
+        <!-- Content Company Section  -->
+        <div class="contentSec">
+          <div class="leftSec" data-aos="fade-right">
+            <p>
+              Accountiva is your forward-thinking partner for achieving clarity,
+              growth and strategic financial excellence. We combine deep
+              expertise with cutting-edge technology to deliver tailored
+              accounting services, innovative financial solutions, and strategic
+              business advisory to empower organizations To take the right
+              dissection.
+            </p>
+          </div>
+          <div class="rightSec" data-aos="fade-left">
+            <img src="../Images/account1.webp" loading="lazy" alt="photo" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision Section -->
+      <section class="contentMissionSec" style="padding-top: 70px">
+        <div
+          class="titlePage"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+        >
+          <span>Our Vision</span>
+        </div>
+        <p data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+          Our vision is to reimagine the future of accounting and financial
+          services by becoming the trusted partner for MENA organizations. By
+          setting unmatched benchmarks in innovation and integrity, we forge
+          enduring partnerships that empower businesses to navigate dynamic
+          markets with confidence.
+        </p>
+      </section>
+      <!-- Our Core Values -->
+      <section class="contentMissionSec">
+        <div
+          class="titlePage"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+        >
+          <span>Our Core Values</span>
+        </div>
+        <!-- <p data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+          Our vision is to reimagine the future of accounting and financial
+          services by becoming the trusted partner for MENA organizations. By
+          setting unmatched benchmarks in innovation and integrity, we forge
+          enduring partnerships that empower businesses to navigate dynamic
+          markets with confidence.
+        </p> -->
+        <div class="contentMission">
+          <div
+            class="topic"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+          >
+            <span class="titleTopic">1. Integrity:</span>
+            <ul class="contentTopic">
+              <li>
+                We act with unwavering ethical rigor, transparency and
+                accountability because trust is the currency of lasting
+                partnerships.
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="topic"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+          >
+            <span class="titleTopic">2. Accuracy:</span>
+            <ul class="contentTopic">
+              <li>
+                Precision isn’t optional it’s our commitment. Every figure,
+                forecast, and strategy are precisely crafted, ensuring absolute
+                accuracy and crystal-clear results.
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="topic"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+          >
+            <span class="titleTopic">3. Confidentiality:</span>
+            <ul class="contentTopic">
+              <li>
+                We safeguard every piece of information with the utmost
+                confidentiality. Through unwavering discretion and robust
+                security measures, we ensure your data remains protected,
+                reinforcing the trust that is integral to our partnership.
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="topic"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+          >
+            <span class="titleTopic">4. Reliability</span>
+            <ul class="contentTopic">
+              <li>
+                In a world of constant change, we are your dependable partner
+                delivering timely and trustworthy financial insights on time and
+                every time.
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="topic"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+          >
+            <span class="titleTopic">5. Credibility:</span>
+            <ul class="contentTopic">
+              <li>
+                Rooted in integrity and ethical excellence, our credibility
+                stands as your most valuable strategic asset empowering every
+                decision with unwavering confidence and absolute certainty.
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="topic"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+          >
+            <span class="titleTopic">6. Client Satisfaction:</span>
+            <ul class="contentTopic">
+              <li>
+                Our clients are at the core of all that we do. Through reliable
+                support and solutions that consistently exceed expectations, for
+                us, client satisfaction isn’t just a goal it’s the foundation of
+                our commitment and the driving force behind our continued
+                partnership.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Google Reviews Section  -->
+      <section
+        class="reviewSec"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
+        <div class="leftReviewSec">
+          <span>Good</span>
+          <ul>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li>
+              <i class="fas fa-star-half-alt"></i>
+            </li>
+          </ul>
+          <span>Based on 466 Reviews </span>
+          <img src="../Images/google.png" loading="lazy" alt="google" />
+        </div>
+        <div class="rightReviewSec">
+          <section class="splide" aria-labelledby="carousel-heading">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="cardd">
+                    <div class="headCard">
+                      <img
+                        src="../Images/user 1.jpg"
+                        loading="lazy"
+                        alt="user"
+                      />
+                    </div>
+                    <h4 class="cardName">James Thompson</h4>
+                    <p class="cardTitle">
+                      “Accountiva has been a game-changer for our business.
+                      Their team is highly professional and always on top of
+                      deadlines. From payroll to tax filings, they’ve made our
+                      accounting stress-free. Highly recommend!”
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="cardd">
+                    <div class="headCard">
+                      <img
+                        src="../Images/user 2.jpg"
+                        loading="lazy"
+                        alt="user"
+                      />
+                    </div>
+                    <h4 class="cardName">Sarah Mitchell</h4>
+                    <p class="cardTitle">
+                      “I’ve had a great experience working with Accountiva.
+                      Their attention to detail and clear financial reporting
+                      helped me make smarter business decisions. Just wish their
+                      response time was a bit faster during peak season.”
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="cardd">
+                    <div class="headCard">
+                      <img
+                        src="../Images/user 3.jpg"
+                        loading="lazy"
+                        alt="user"
+                      />
+                    </div>
+                    <h4 class="cardName">Michael Chen</h4>
+                    <p class="cardTitle">
+                      “Accountiva delivers exceptional service! They took the
+                      time to understand my startup’s unique needs and offered
+                      personalized solutions. Their guidance during tax season
+                      saved me both time and money.”
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="cardd">
+                    <div class="headCard">
+                      <img
+                        src="../Images/user 4.jpg"
+                        loading="lazy"
+                        alt="user"
+                      />
+                    </div>
+                    <h4 class="cardName">David Ramirez</h4>
+                    <p class="cardTitle">
+                      “The team at Accountiva is knowledgeable and reliable.
+                      They’ve been handling our books for over a year now with
+                      minimal issues. There’s still room to improve their client
+                      portal, but overall, very satisfied.”
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <!-- FAQ Section -->
+      <section
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        class="faqSec container-fluid pt-5 pb-5"
+        style="background-color: #13293d"
+      >
+        <div class="container">
+          <h2 style="color: #00d8ff">FAQ</h2>
+          <div id="accordion" class="mt-4">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card border mb-3">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <a
+                        class="btn"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        What services does Accountiva offer?
+                      </a>
+                    </h5>
+                  </div>
+
+                  <div
+                    id="collapseOne"
+                    class="collapse"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body">
+                      Accountiva provides a full range of accounting services
+                      including bookkeeping, payroll management, tax
+                      preparation, financial consulting, and business advisory.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card border mb-3">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <a
+                        class="btn collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Is Accountiva suitable for small businesses or only
+                        large companies?
+                      </a>
+                    </h5>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    class="collapse"
+                    aria-labelledby="headingTwo"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body">
+                      Accountiva works with businesses of all sizes. Whether
+                      you're a freelancer, a small startup, or an established
+                      company, they offer customized accounting solutions to fit
+                      your needs.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="card border mb-3">
+                  <div class="card-header" id="heading3">
+                    <h5 class="mb-0">
+                      <a
+                        class="btn"
+                        data-toggle="collapse"
+                        data-target="#collapse3"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        How does Accountiva ensure the confidentiality of
+                        financial data?
+                      </a>
+                    </h5>
+                  </div>
+
+                  <div
+                    id="collapse3"
+                    class="collapse"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body">
+                      Accountiva uses secure, encrypted systems and follows
+                      strict confidentiality protocols to protect client
+                      information and maintain privacy at all times.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card border mb-3">
+                  <div class="card-header" id="heading4">
+                    <h5 class="mb-0">
+                      <a
+                        class="btn"
+                        data-toggle="collapse"
+                        data-target="#collapse4"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Can Accountiva help with tax planning and filing?
+                      </a>
+                    </h5>
+                  </div>
+                  <div
+                    id="collapse4"
+                    class="collapse"
+                    aria-labelledby="headingTwo"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body">
+                      Yes, Accountiva specializes in tax planning and ensures
+                      timely and accurate filing. Their experts also help
+                      identify legal deductions to minimize tax liability.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer Section -->
+      <footer
+        class="footerSec"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
+        <div class="footerWraper">
+          <div class="aboutusSec">
+            <div class="title">About Us</div>
+            <div class="content">
+              Welcome to Accountiva, Your Future Precisely Accounted” is not
+              just a slogan, it’s our pledge to deliver exceptional accuracy,
+              unwavering reliability, and forward-thinking financial solutions
+              tailored to your unique needs.
+            </div>
+          </div>
+
+          <div class="servicesSec">
+            <div class="title">Services</div>
+            <div class="content">
+              <span>Core Accounting & Compliance Services</span>
+              <span>Financial Advisory & Risk Management</span>
+              <span>Business Growth Solutions</span>
+              <span>Services in Partnership</span>
+            </div>
+          </div>
+
+          <div class="quickLinksSec">
+            <div class="title">Quick Links</div>
+            <div class="content">
+              <a href="../index.html">Home</a>
+              <a href="../Pages/aboutUs.html">About Us</a>
+              <a href="../Pages/services.html">Service</a>
+              <a href="../Pages/contactUs.html">Contact Us</a>
+            </div>
+          </div>
+
+          <div class="contactSec">
+            <div class="title">Contact</div>
+
+            <div class="content">
+              <div>
+                <i class="fas fa-phone"></i
+                ><span style="margin-left: 10px">+9715016132</span>
+              </div>
+              <div>
+                <i class="fas fa-envelope"></i>
+                <span style="margin-left: 10px">info@accountiva.co</span>
+              </div>
+              <!-- <div>
+                <i class="fas fa-map-marker-alt"></i
+                ><span style="margin-left: 10px"
+                  >Ali And Sons Business, Center, Plot No. 29 - Umm Al Nar - Abu
+                  Dhabi.</span
+                >
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <!-- Copy right -->
+        <div style="width: 100%; border-top: 3px solid #fe7100 !important">
+          <p class="copyright">
+            © CopyRight 2025 . Designed by
+            <a
+              href="https://www.instagram.com/ahmedelsayedd.01/"
+              target="_blank"
+              ><img
+                src="../Images/logo me3.jpeg"
+                loading="lazy"
+                alt="logo"
+                class="logoDevelop"
+            /></a>
+            All Rights Reserved .
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Section Right Socail -->
+    <div class="socailBar">
+      <a href="tel:+9715016132" class="scoailPhone" target="_blank">
+        <i class="fa fa-phone"></i>
+      </a>
+      <a
+        href="https://api.whatsapp.com/send?phone=+9715016132&amp;text=Hello! I saw the company's website and I want to inquire about something"
+        class="scoailWhatsapp"
+        target="_blank"
+        ><i class="fab fa-whatsapp"></i
+      ></a>
+      <a
+        class="socialGraduation"
+        href="mailto:info@accountiva.co"
+        target="_blank"
+      >
+        <i class="far fa-envelope"></i>
+      </a>
+    </div>
+    <!-- Container page -->
+    <!-- Warper Background  -->
+    <script src="../Scripts/aboutUs.js"></script>
+  </body>
+</html>

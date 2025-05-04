@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/contactUs.css" />
+    <!-- Icon Page -->
+    <link rel="icon" href="../Images/logoTap.jpg" />
+    <title>Accountiva</title>
+    <!-- Icons Liberary -->
+    <script
+      src="https://kit.fontawesome.com/bbda8ae88d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap Liberary -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Jquery Liberary -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- INITIALIZE AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- \\\ INITIALIZE AOS /// -->
+    <script>
+      /* BUT Sniper When load Page */
+      $(window).on("load", function () {
+        $("#loading").hide();
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Loading Page Spiner -->
+    <div id="loading">
+      <img
+        id="loading-image"
+        src="../Images/logoPage.png"
+        loading="lazy"
+        alt="Loading..."
+      />
+    </div>
+    <!-- Header Page Section -->
+    <header>
+      <!-- Location Company -->
+      <div
+        class=""
+        style="
+          width: 50%;
+          display: flex;
+          justify-content: flex-start;
+          column-gap: 15px;
+        "
+      >
+        <!-- Email Company -->
+        <div class="emailCom">
+          <span><i class="fas fa-envelope"></i> info@accountiva.co</span>
+        </div>
+        <!-- Phone Company -->
+        <div class="phoneCom">
+          <span><i class="fas fa-phone"></i> +9715016132</span>
+        </div>
+      </div>
+      <div class="btn-download">
+        <a
+          href="../File/Accountiva Profile.pdf"
+          download="Accountiva_Profile.pdf"
+        >
+          <button type="button" class="btn">Download Profile</button>
+        </a>
+      </div>
+    </header>
+    <!-- Nav Page Section -->
+    <nav>
+      <ul class="menuMobil">
+        <li><a href="../index.html">Hdome</a></li>
+        <li><a href="../Pages/aboutUs.html">About Us</a></li>
+        <li><a href="../Pages/services.html">Service</a></li>
+        <li><a href="../Pages/contactUs.html">Contact Us</a></li>
+      </ul>
+      <div class="wrapperNav">
+        <div class="logoPage">
+          <a href="../index.html">
+            <img src="../Images/logoPage.png" loading="lazy" alt="logo" />
+            <span>Accountiva</span>
+          </a>
+        </div>
+        <div class="linksPage">
+          <span class="showMenu">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+          <span class="hideMenu d-none">
+            <i class="fa-solid fa-xmark"></i>
+          </span>
+          <ul class="menuTap">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Pages/aboutUs.html">About Us</a></li>
+            <li>
+              <a href="../Pages/services.html">Service</a>
+            </li>
+            <li class="activeTap">
+              <a href="../Pages/contactUs.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Container page -->
+    <div class="containerr">
+      <div class="headerContact">
+        <h1>Home -> Contact US</h1>
+      </div>
+      <!-- Contact Us  -->
+      <section class="contentAboutSec">
+        <!-- <div class="headerContact">
+          Reach out to learn more about our services and how we can support your
+          security needs.
+        </div> -->
+        <!-- Title Page Section  -->
+        <!-- <div
+          class="titlePage"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+        >
+          <span>Contact Us</span>
+        </div> -->
+
+        <!-- Content Company Section  -->
+        <div class="contentSec">
+          <div class="tap" data-aos="fade-right">
+            <div class="title">
+              <i class="fa fa-phone"></i><span>Phone:</span>
+            </div>
+            <div class="content">
+              <span>+9715016132 .</span>
+              <!-- <span>Whatsapp: +9715016132.</span> -->
+            </div>
+          </div>
+          <div class="tap" data-aos="fade-right">
+            <div class="title">
+              <i class="fa-solid fa-envelope"></i><span>Email:</span>
+            </div>
+            <div class="content">
+              <span>info@accountiva.co .</span>
+            </div>
+          </div>
+          <div class="tap" data-aos="fade-right">
+            <div class="title">
+              <i class="fas fa-map-marker-alt"></i><span>Address:</span>
+            </div>
+            <div class="content">
+              <span
+                >Ali And Sons Business, Center, Plot No. 29 - Umm Al Nar - Abu
+                Dhabi.</span
+              >
+            </div>
+          </div>
+          <div class="tap" data-aos="fade-right">
+            <div class="title">
+              <i class="fa-solid fa-globe"></i><span>Website:</span>
+            </div>
+            <div class="content">
+              <span>www.accountiva.co .</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- <form class="styled-form"> -->
+        <form
+          id="contactForm"
+          method="POST"
+          class="styled-form"
+          onsubmit="return sendEmail(event)"
+        >
+          <label for="FirstName">First Name</label>
+          <input
+            type="text"
+            id="FirstName"
+            name="FirstName"
+            placeholder="Enter your first name"
+            required
+          />
+
+          <label for="Email">Email</label>
+          <input
+            type="email"
+            id="Email"
+            name="Email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label for="PhoneNumber">Phone Number</label>
+          <input
+            type="number"
+            id="PhoneNumber"
+            name="PhoneNumber"
+            placeholder="Enter your phone number"
+            required
+          />
+
+          <label for="Address">Address</label>
+          <input
+            type="text"
+            id="Address"
+            name="Address"
+            placeholder="Enter your address"
+            required
+          />
+
+          <label for="Message">Message</label>
+          <textarea
+            id="Message"
+            name="Message"
+            placeholder="Write your message here"
+            rows="5"
+            cols="15"
+            required
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+
+        <!-- <iframe
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29046.57497458102!2d54.357386!3d24.491628!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e677ae63b5791%3A0xfe1639c4788bc26e!2sTrust%20Well%20-%20Business%20Centre%20and%20Company%20Formation%20in%20Abu%20Dhabi!5e0!3m2!1sen!2seg!4v1733004544137!5m2!1sen!2seg"
+          width="100%"
+          height="500"
+          style="border-radius: 10px"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe> -->
+      </section>
+
+      <!-- Footer Section -->
+      <footer
+        class="footerSec"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
+        <div class="footerWraper">
+          <div class="aboutusSec">
+            <div class="title">About Us</div>
+            <div class="content">
+              Welcome to Accountiva, Your Future Precisely Accounted” is not
+              just a slogan, it’s our pledge to deliver exceptional accuracy,
+              unwavering reliability, and forward-thinking financial solutions
+              tailored to your unique needs.
+            </div>
+          </div>
+
+          <div class="servicesSec">
+            <div class="title">Services</div>
+            <div class="content">
+              <span>Core Accounting & Compliance Services</span>
+              <span>Financial Advisory & Risk Management</span>
+              <span>Business Growth Solutions</span>
+              <span>Services in Partnership</span>
+            </div>
+          </div>
+
+          <div class="quickLinksSec">
+            <div class="title">Quick Links</div>
+            <div class="content">
+              <a href="../index.html">Home</a>
+              <a href="../Pages/aboutUs.html">About Us</a>
+              <a href="../Pages/services.html">Service</a>
+              <a href="../Pages/contactUs.html">Contact Us</a>
+            </div>
+          </div>
+
+          <div class="contactSec">
+            <div class="title">Contact</div>
+
+            <div class="content">
+              <div>
+                <i class="fas fa-phone"></i
+                ><span style="margin-left: 10px">+9715016132</span>
+              </div>
+              <div>
+                <i class="fas fa-envelope"></i>
+                <span style="margin-left: 10px">info@accountiva.co</span>
+              </div>
+              <!-- <div>
+                <i class="fas fa-map-marker-alt"></i
+                ><span style="margin-left: 10px"
+                  >Ali And Sons Business, Center, Plot No. 29 - Umm Al Nar - Abu
+                  Dhabi.</span
+                >
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <!-- Copy right -->
+        <div style="width: 100%; border-top: 3px solid #fe7100 !important">
+          <p class="copyright">
+            © CopyRight 2025 . Designed by
+            <a
+              href="https://www.instagram.com/ahmedelsayedd.01/"
+              target="_blank"
+              ><img
+                src="../Images/logo me3.jpeg"
+                loading="lazy"
+                alt="logo"
+                class="logoDevelop"
+            /></a>
+            All Rights Reserved .
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Section Right Socail -->
+    <div class="socailBar">
+      <a href="tel:+9715016132" class="scoailPhone" target="_blank">
+        <i class="fa fa-phone"></i>
+      </a>
+      <a
+        href="https://api.whatsapp.com/send?phone=+9715016132&amp;text=Hello! I saw the company's website and I want to inquire about something"
+        class="scoailWhatsapp"
+        target="_blank"
+        ><i class="fab fa-whatsapp"></i
+      ></a>
+      <a
+        class="socialGraduation"
+        href="mailto:info@accountiva.co"
+        target="_blank"
+      >
+        <i class="far fa-envelope"></i>
+      </a>
+    </div>
+    <!-- Container page -->
+    <!-- Warper Background  -->
+    <script src="../Scripts/contactUs.js"></script>
+    <script>
+      window.onload = function () {
+        // Reset the form fields when the page loads
+        document.querySelector(".styled-form").reset();
+      };
+      function sendEmail(event) {
+        event.preventDefault();
+
+        const firstName = document.getElementById("FirstName").value.trim();
+        const email = document.getElementById("Email").value.trim();
+        const phoneNumber = document.getElementById("PhoneNumber").value.trim();
+        const address = document.getElementById("Address").value.trim();
+        const message = document.getElementById("Message").value.trim();
+
+        if (!firstName || !email || !phoneNumber || !address || !message) {
+          alert("All fields are required.");
+          return false;
+        }
+
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+          alert("Please enter a valid email address.");
+          return false;
+        }
+
+        const emailBody = `
+              First Name: ${firstName}
+              Email: ${email}
+              Phone Number: ${phoneNumber}
+              Address: ${address}
+              Message: ${message}
+            `;
+
+        window.location.href = `mailto:info@accountiva.co?subject=Contact Form Submission&body=${encodeURIComponent(
+          emailBody
+        )}`;
+        return true;
+      }
+    </script>
+  </body>
+</html>
+<!-- 
+info@accountiva.co
+Info@sls12
+-->
