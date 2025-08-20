@@ -317,23 +317,20 @@ nav .wrapperNav .linksPage .menuTap {
        overflow: hidden;
        width: 100%;
        height: 86vh;
-       /* background-image: linear-gradient(-50deg,
-                     rgba(15, 90, 122, 0.477),
-                     rgba(111, 18, 102, 0.627),
-                     rgba(0, 0, 0, 0.216)),
-              url(../Images/newImage.avif);
-
-       background-position: center;
-       background-repeat: no-repeat;
-       background-size: cover; */
        background-color: #071320;
 }
 
-#particles-js {
+.heroBackground {
        position: absolute;
-       background: #000;
+       top: 0;
+       left: 0;
        width: 100%;
        height: 100%;
+       background-image: linear-gradient(rgba(7, 19, 32, 0.8), rgba(7, 19, 32, 0.8)), url('../Images/home1.webp');
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+       z-index: 1;
 }
 
 .contentHeader {
@@ -344,7 +341,7 @@ nav .wrapperNav .linksPage .menuTap {
        align-items: center;
        justify-content: center;
        top: 20%;
-       z-index: 100;
+       z-index: 10;
 }
 
 .contentHeader>span {
@@ -363,7 +360,7 @@ nav .wrapperNav .linksPage .menuTap {
        left: 50%;
        font-size: 2rem;
        color: var(--main-clr);
-       z-index: 100;
+       z-index: 10;
        cursor: pointer;
        transition: all 0.3s ease-in-out;
        animation: MoveUpDown 1.3s linear infinite alternate;
@@ -436,6 +433,7 @@ nav .wrapperNav .linksPage .menuTap {
        0% {
               bottom: 70px;
        }
+
        100% {
               bottom: 50px;
        }
@@ -474,7 +472,7 @@ nav .wrapperNav .linksPage .menuTap {
        display: flex;
        align-items: center;
        justify-content: space-between;
-       column-gap: 8px;
+       column-gap: 8px; 
 }
 
 .reviewSec .leftReviewSec ul li>i {
