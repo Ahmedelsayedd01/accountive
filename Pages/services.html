@@ -7,6 +7,13 @@
     <!-- Icon Page -->
     <link rel="icon" href="../Images/logoTap.jpg" />
     <title>Accountiva</title>
+    <!-- Luxury Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Icons Liberary -->
     <script
       src="https://kit.fontawesome.com/bbda8ae88d.js"
@@ -59,14 +66,41 @@
     </script>
   </head>
   <body>
-    <!-- Loading Page Spiner -->
+    <!-- Loading Page Section -->
     <div id="loading">
-      <img
-        id="loading-image"
-        src="../Images/logoPage.png"
-        loading="lazy"
-        alt="Loading..."
-      />
+      <!-- Logo -->
+      <div class="loading-logo">
+        <img src="../Images/logoPage.png" alt="Accountiva" class="logo-image" />
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+
+      <!-- Background Elements -->
+      <div class="loading-background">
+        <div class="floating-element" style="top: 10%; left: 10%">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="floating-element" style="top: 20%; right: 15%">
+          <i class="fas fa-calculator"></i>
+        </div>
+        <div class="floating-element" style="bottom: 30%; left: 20%">
+          <i class="fas fa-coins"></i>
+        </div>
+        <div class="floating-element" style="bottom: 20%; right: 10%">
+          <i class="fas fa-chart-pie"></i>
+        </div>
+        <div class="floating-element" style="top: 60%; left: 80%">
+          <i class="fas fa-piggy-bank"></i>
+        </div>
+        <div class="floating-element" style="top: 80%; left: 30%">
+          <i class="fas fa-balance-scale"></i>
+        </div>
+      </div>
     </div>
     <!-- Header Page Section -->
     <header>
@@ -94,16 +128,18 @@
           href="../File/Accountiva Profile.pdf"
           download="Accountiva_Profile.pdf"
         >
-          <button type="button" class="btn">Download Profile</button>
+          <button type="button" class="btn">
+            <i class="fas fa-download"></i> Download Profile
+          </button>
         </a>
       </div>
     </header>
     <!-- Nav Page Section -->
     <nav>
       <ul class="menuMobil">
-        <li><a href="../index.html">Hdome</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="../Pages/aboutUs.html">About Us</a></li>
-        <li><a href="../Pages/services.html">Service</a></li>
+        <li><a href="../Pages/services.html">Services</a></li>
         <li><a href="../Pages/contactUs.html">Contact Us</a></li>
       </ul>
       <div class="wrapperNav">
@@ -124,7 +160,7 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="../Pages/aboutUs.html">About Us</a></li>
             <li class="activeTap">
-              <a href="../Pages/services.html">Service</a>
+              <a href="../Pages/services.html">Services</a>
             </li>
             <li><a href="../Pages/contactUs.html">Contact Us</a></li>
           </ul>
@@ -134,42 +170,228 @@
 
     <!-- Container page -->
     <div class="containerr">
-      <!-- Who We Are  -->
-      <section class="contentAboutSec" style="padding-top: 30px">
-        <!-- Title Page Section  -->
-        <div
-          class="titlePage"
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-bottom"
-        >
-          <span>Our Services</span>
-        </div>
-        <!-- Content Company Section  -->
-        <div class="contentSec">
-          <div class="leftSec" data-aos="fade-right">
-            <p>
-              At Accountiva, we provide comprehensive financial solutions
-              tailored to your business needs. Our services range from core
-              accounting and tax compliance to financial advisory, risk
-              management, and business growth strategies. Through both in-house
-              expertise and trusted partnerships, we ensure your business stays
-              compliant, financially healthy, and ready for growth.
-            </p>
+      <!-- Hero Section for Services -->
+      <section class="servicesHero">
+        <div class="heroContent" data-aos="fade-up">
+          <h1>Professional Accounting Services</h1>
+          <p class="heroSubtitle">
+            Comprehensive Financial Solutions for Your Business Success
+          </p>
+          <p class="heroDescription">
+            At Accountiva, we provide comprehensive financial solutions tailored
+            to your business needs. Our services range from core accounting and
+            tax compliance to financial advisory, risk management, and business
+            growth strategies.
+          </p>
+          <div class="heroButtons">
+            <a href="#core-services" class="btn btn-primary"
+              >Explore Services</a
+            >
+            <a href="../Pages/contactUs.html" class="btn btn-secondary"
+              >Get Free Consultation</a
+            >
           </div>
-          <div class="rightSec" data-aos="fade-left">
-            <img src="../Images/account4.jpg" loading="lazy" alt="photo" />
+        </div>
+        <div class="heroImage" data-aos="fade-left">
+          <img
+            src="../Images/account4.jpg"
+            loading="lazy"
+            alt="Professional Accounting Services"
+          />
+        </div>
+      </section>
+
+      <!-- Statistics Section -->
+      <section class="statsSection" data-aos="fade-up">
+        <div class="statsContainer">
+          <div class="statItem">
+            <span class="statNumber">500+</span>
+            <span class="statLabel">Satisfied Clients</span>
+          </div>
+          <div class="statItem">
+            <span class="statNumber">15+</span>
+            <span class="statLabel">Years Experience</span>
+          </div>
+          <div class="statItem">
+            <span class="statNumber">99%</span>
+            <span class="statLabel">Accuracy Rate</span>
+          </div>
+          <div class="statItem">
+            <span class="statNumber">24/7</span>
+            <span class="statLabel">Support Available</span>
           </div>
         </div>
       </section>
 
-      <!-- Our Core Accounting & Compliance Services -->
+      <!-- Service Categories Overview -->
+      <section class="serviceCategories" id="core-services">
+        <div class="sectionHeader" data-aos="fade-up">
+          <h2>Our Service Categories</h2>
+          <p>
+            Comprehensive financial solutions designed to meet all your business
+            needs
+          </p>
+        </div>
+
+        <div class="serviceGrid">
+          <div class="serviceCard" data-aos="fade-up" data-aos-delay="100">
+            <div class="serviceIcon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3>Core Accounting & Compliance</h3>
+            <p>
+              Professional bookkeeping, financial statements, payroll
+              management, and regulatory compliance to keep your business on
+              track.
+            </p>
+            <div class="serviceFeatures">
+              <span
+                ><i class="fas fa-check"></i> Daily Transaction Recording</span
+              >
+              <span
+                ><i class="fas fa-check"></i> Financial Statement
+                Preparation</span
+              >
+              <span><i class="fas fa-check"></i> Tax Compliance & Filing</span>
+            </div>
+          </div>
+
+          <div class="serviceCard" data-aos="fade-up" data-aos-delay="200">
+            <div class="serviceIcon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Financial Advisory & Risk Management</h3>
+            <p>
+              Strategic financial guidance, cash flow optimization, and risk
+              mitigation to protect and grow your business.
+            </p>
+            <div class="serviceFeatures">
+              <span><i class="fas fa-check"></i> Financial Consultation</span>
+              <span><i class="fas fa-check"></i> Cash Flow Optimization</span>
+              <span><i class="fas fa-check"></i> Risk Assessment</span>
+            </div>
+          </div>
+
+          <div class="serviceCard" data-aos="fade-up" data-aos-delay="300">
+            <div class="serviceIcon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Business Growth Solutions</h3>
+            <p>
+              Comprehensive support for business expansion, strategic planning,
+              and performance optimization.
+            </p>
+            <div class="serviceFeatures">
+              <span><i class="fas fa-check"></i> Strategic Planning</span>
+              <span><i class="fas fa-check"></i> Performance Optimization</span>
+              <span><i class="fas fa-check"></i> Expansion Support</span>
+            </div>
+          </div>
+
+          <div class="serviceCard" data-aos="fade-up" data-aos-delay="400">
+            <div class="serviceIcon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3>Partnership Services</h3>
+            <p>
+              Specialized services through trusted partnerships including
+              forensic accounting and due diligence.
+            </p>
+            <div class="serviceFeatures">
+              <span><i class="fas fa-check"></i> Forensic Accounting</span>
+              <span><i class="fas fa-check"></i> Due Diligence</span>
+              <span><i class="fas fa-check"></i> Feasibility Studies</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How We Work Process -->
+      <section class="processSection">
+        <div class="sectionHeader" data-aos="fade-up">
+          <h2>Our Process</h2>
+          <p>
+            Simple, efficient, and transparent approach to managing your
+            finances
+          </p>
+        </div>
+
+        <div class="processSteps">
+          <div class="processStep" data-aos="fade-up" data-aos-delay="100">
+            <div class="stepNumber">01</div>
+            <div class="stepIcon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3>Initial Consultation</h3>
+            <p>
+              We start with a comprehensive discussion to understand your
+              business needs, challenges, and financial goals.
+            </p>
+          </div>
+
+          <div class="processStep" data-aos="fade-up" data-aos-delay="200">
+            <div class="stepNumber">02</div>
+            <div class="stepIcon">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+            <h3>Custom Strategy</h3>
+            <p>
+              Based on your requirements, we develop a tailored financial
+              strategy and service plan specifically for your business.
+            </p>
+          </div>
+
+          <div class="processStep" data-aos="fade-up" data-aos-delay="300">
+            <div class="stepNumber">03</div>
+            <div class="stepIcon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3>Implementation</h3>
+            <p>
+              Our expert team implements the agreed services with precision,
+              keeping you informed throughout the process.
+            </p>
+          </div>
+
+          <div class="processStep" data-aos="fade-up" data-aos-delay="400">
+            <div class="stepNumber">04</div>
+            <div class="stepIcon">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <h3>Ongoing Support</h3>
+            <p>
+              We provide continuous monitoring, regular reports, and ongoing
+              support to ensure your business stays on track.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Core Accounting & Compliance Servicess -->
       <section class="contentMissionSec">
         <div
           class="titlePage"
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          <span>Core Accounting & Compliance Services</span>
+          <span>Core Accounting & Compliance Servicess</span>
+        </div>
+        <!-- Core Services Image -->
+        <div class="contentSec" data-aos="fade-up">
+          <div class="leftSec">
+            <img
+              src="../Images/account1.webp"
+              loading="lazy"
+              alt="Core Accounting Services"
+            />
+          </div>
+          <div class="rightSec">
+            <p>
+              Our core accounting and compliance services form the foundation of
+              your business's financial health. We ensure accuracy, timeliness,
+              and regulatory compliance in all your financial operations.
+            </p>
+          </div>
         </div>
         <div class="contentMission">
           <div
@@ -267,6 +489,24 @@
           data-aos-anchor-placement="center-bottom"
         >
           <span>Financial Advisory & Risk Management</span>
+        </div>
+        <!-- Financial Advisory Image -->
+        <div class="contentSec" data-aos="fade-up">
+          <div class="leftSec">
+            <p>
+              Our financial advisory and risk management services help you
+              navigate complex financial decisions with confidence. We provide
+              strategic insights and risk mitigation strategies to protect and
+              grow your business.
+            </p>
+          </div>
+          <div class="rightSec">
+            <img
+              src="../Images/account2.jpg"
+              loading="lazy"
+              alt="Financial Advisory Services"
+            />
+          </div>
         </div>
         <div class="contentMission">
           <div
@@ -369,6 +609,24 @@
         >
           <span>Business Growth Solutions</span>
         </div>
+        <!-- Business Growth Image -->
+        <div class="contentSec" data-aos="fade-up">
+          <div class="leftSec">
+            <img
+              src="../Images/account3.webp"
+              loading="lazy"
+              alt="Business Growth Solutions"
+            />
+          </div>
+          <div class="rightSec">
+            <p>
+              Our business growth solutions are designed to accelerate your
+              company's expansion and success. From strategic planning to
+              financial optimization, we provide the tools and expertise you
+              need to scale effectively.
+            </p>
+          </div>
+        </div>
         <div class="contentMission">
           <div
             class="topic"
@@ -459,14 +717,14 @@
           </div>
         </div>
       </section>
-      <!-- Our Services in Partnership -->
+      <!-- Our Servicess in Partnership -->
       <section class="contentMissionSec">
         <div
           class="titlePage"
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          <span>Services in Partnership</span>
+          <span>Servicess in Partnership</span>
         </div>
         <div class="contentMission">
           <div
@@ -511,6 +769,40 @@
                 development decisions .
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="ctaSection">
+        <div class="ctaContent" data-aos="fade-up">
+          <h2>Ready to Transform Your Business Finances?</h2>
+          <p>
+            Join 500+ satisfied clients who trust Accountiva for their financial
+            success. Get a free consultation today and discover how we can help
+            your business thrive.
+          </p>
+          <div class="ctaButtons">
+            <a href="../Pages/contactUs.html" class="btn btn-primary"
+              >Get Free Consultation</a
+            >
+            <a href="tel:+9715016132" class="btn btn-secondary">
+              <i class="fas fa-phone"></i> Call Now: +971 501 6132
+            </a>
+          </div>
+          <div class="ctaFeatures">
+            <div class="ctaFeature">
+              <i class="fas fa-shield-alt"></i>
+              <span>100% Confidential</span>
+            </div>
+            <div class="ctaFeature">
+              <i class="fas fa-clock"></i>
+              <span>Quick Response</span>
+            </div>
+            <div class="ctaFeature">
+              <i class="fas fa-award"></i>
+              <span>Certified Experts</span>
+            </div>
           </div>
         </div>
       </section>
@@ -768,12 +1060,12 @@
           </div>
 
           <div class="servicesSec">
-            <div class="title">Services</div>
+            <div class="title">Servicess</div>
             <div class="content">
-              <span>Core Accounting & Compliance Services</span>
+              <span>Core Accounting & Compliance Servicess</span>
               <span>Financial Advisory & Risk Management</span>
               <span>Business Growth Solutions</span>
-              <span>Services in Partnership</span>
+              <span>Servicess in Partnership</span>
             </div>
           </div>
 
@@ -782,7 +1074,7 @@
             <div class="content">
               <a href="../index.html">Home</a>
               <a href="../Pages/aboutUs.html">About Us</a>
-              <a href="../Pages/services.html">Service</a>
+              <a href="../Pages/services.html">Services</a>
               <a href="../Pages/contactUs.html">Contact Us</a>
             </div>
           </div>

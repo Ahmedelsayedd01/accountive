@@ -7,6 +7,13 @@
     <!-- Icon Page -->
     <link rel="icon" href="./Images/logoTap.jpg" />
     <title>Accountiva</title>
+    <!-- Luxury Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Icons Liberary -->
     <script
       src="https://kit.fontawesome.com/bbda8ae88d.js"
@@ -52,21 +59,90 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- \\\ INITIALIZE AOS /// -->
     <script>
-      /* BUT Sniper When load Page */
-      $(window).on("load", function () {
-        $("#loading").hide();
+      /* Professional Loading Screen Control */
+      $(document).ready(function () {
+        // Start loading animations
+        startLoadingAnimations();
+
+        // Hide loading screen when page is fully loaded
+        $(window).on("load", function () {
+          setTimeout(function () {
+            $("#loading").fadeOut(800, function () {
+              // Initialize AOS after loading screen disappears
+              if (typeof AOS !== "undefined") {
+                AOS.init({
+                  duration: 1000,
+                  once: true,
+                  offset: 100,
+                });
+              }
+            });
+          }, 500); // Short delay to show completion
+        });
       });
+
+      function startLoadingAnimations() {
+        // Progress bar animation
+        let progress = 0;
+        const progressFill = document.querySelector(".progress-fill");
+        const progressInterval = setInterval(function () {
+          progress += Math.random() * 15;
+          if (progress > 100) progress = 100;
+
+          if (progressFill) {
+            progressFill.style.width = progress + "%";
+          }
+
+          if (progress >= 100) {
+            clearInterval(progressInterval);
+          }
+        }, 200);
+
+        // Clear interval when page loads
+        $(window).on("load", function () {
+          setTimeout(function () {
+            clearInterval(progressInterval);
+          }, 500);
+        });
+      }
     </script>
   </head>
   <body>
-    <!-- Loading Page Spiner -->
+    <!-- Simple Loading Screen -->
     <div id="loading">
-      <img
-        id="loading-image"
-        src="./Images/logoPage.png"
-        loading="lazy"
-        alt="Loading..."
-      />
+      <!-- Logo -->
+      <div class="loading-logo">
+        <img src="./Images/logoPage.png" alt="Accountiva" class="logo-image" />
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+
+      <!-- Background Elements -->
+      <div class="loading-background">
+        <div class="floating-element" style="top: 10%; left: 10%">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="floating-element" style="top: 20%; right: 15%">
+          <i class="fas fa-calculator"></i>
+        </div>
+        <div class="floating-element" style="bottom: 30%; left: 20%">
+          <i class="fas fa-coins"></i>
+        </div>
+        <div class="floating-element" style="bottom: 20%; right: 10%">
+          <i class="fas fa-chart-pie"></i>
+        </div>
+        <div class="floating-element" style="top: 60%; left: 80%">
+          <i class="fas fa-piggy-bank"></i>
+        </div>
+        <div class="floating-element" style="top: 80%; left: 30%">
+          <i class="fas fa-balance-scale"></i>
+        </div>
+      </div>
     </div>
     <!-- Header Page Section -->
     <header>
@@ -94,22 +170,24 @@
           href="./File/Accountiva Profile.pdf"
           download="Accountiva_Profile.pdf"
         >
-          <button type="button" class="btn">Download Profile</button>
+          <button type="button" class="btn">
+            <i class="fas fa-download"></i> Download Profile
+          </button>
         </a>
       </div>
     </header>
     <!-- Nav Page Section -->
     <nav>
       <ul class="menuMobil">
-        <li><a href="/">Home</a></li>
+        <li><a href="./index.html">Home</a></li>
         <li><a href="./Pages/aboutUs.html">About Us</a></li>
-        <li><a href="./Pages/services.html">Service</a></li>
+        <li><a href="./Pages/services.html">Services</a></li>
         <li><a href="./Pages/contactUs.html">Contact Us</a></li>
       </ul>
       <div class="wrapperNav">
         <div class="logoPage">
-          <a href="index.html">
-            <img src="Images/logoPage.png" loading="lazy" alt="logo" />
+          <a href="./index.html">
+            <img src="./Images/logoPage.png" loading="lazy" alt="logo" />
             <span>Accountiva</span>
           </a>
         </div>
@@ -121,9 +199,11 @@
             <i class="fa-solid fa-xmark"></i>
           </span>
           <ul class="menuTap">
-            <li class="activeTap"><a href="/">Home</a></li>
-            <li><a href="./Pages/aboutUs.html">About Us</a></li>
-            <li><a href="./Pages/services.html">Service</a></li>
+            <li class="activeTap"><a href="./index.html">Home</a></li>
+            <li>
+              <a href="./Pages/aboutUs.html">About Us</a>
+            </li>
+            <li><a href="./Pages/services.html">Services</a></li>
             <li><a href="./Pages/contactUs.html">Contact Us</a></li>
           </ul>
         </div>
@@ -134,73 +214,324 @@
       <!-- Hero Section -->
       <section class="heroSec">
         <div class="heroBackground"></div>
-        <a class="errowNext" href="#whoWeAre">
+        <div class="heroContent">
+          <div class="heroText" data-aos="fade-up">
+            <h1>Your Future Precisely Accounted</h1>
+            <p class="heroSubtitle">
+              Professional Accounting & Financial Services That Drive Success
+            </p>
+            <p class="heroDescription">
+              We deliver exceptional accuracy, unwavering reliability, and
+              forward-thinking financial solutions tailored to your unique
+              business needs. Transform your financial management with our
+              expert team.
+            </p>
+            <div class="heroButtons">
+              <a href="./Pages/services.html" class="btn btn-primary">
+                <i class="fas fa-chart-line"></i> Explore Our Services
+              </a>
+              <a href="./Pages/contactUs.html" class="btn btn-secondary">
+                <i class="fas fa-phone"></i> Get Free Consultation
+              </a>
+            </div>
+            <div class="heroFeatures">
+              <div class="heroFeature">
+                <i class="fas fa-shield-alt"></i>
+                <span>Secure & Confidential</span>
+              </div>
+              <div class="heroFeature">
+                <i class="fas fa-clock"></i>
+                <span>24/7 Support</span>
+              </div>
+              <div class="heroFeature">
+                <i class="fas fa-award"></i>
+                <span>15+ Years Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="errowNext" href="#statsSection">
           <i class="fa-solid fa-angles-down"></i>
         </a>
-        <div class="contentHeader">
-          <span>
-            Your Future Precisely Accounted” is not just a slogan, it’s our
-            pledge to deliver exceptional accuracy, unwavering reliability, and
-            forward-thinking financial solutions tailored to your unique needs.
-          </span>
+      </section>
+
+      <!-- Statistics Section -->
+      <section class="statsSection" id="statsSection">
+        <div class="statsContainer" data-aos="fade-up">
+          <div class="statItem">
+            <span class="statNumber">500+</span>
+            <span class="statLabel">Satisfied Clients</span>
+          </div>
+          <div class="statItem">
+            <span class="statNumber">15+</span>
+            <span class="statLabel">Years Experience</span>
+          </div>
+          <div class="statItem">
+            <span class="statNumber">99%</span>
+            <span class="statLabel">Accuracy Rate</span>
+          </div>
+          <div class="statItem">
+            <span class="statNumber">24/7</span>
+            <span class="statLabel">Support Available</span>
+          </div>
         </div>
       </section>
 
-      <!-- Who We Are  -->
-      <section class="contentAboutSec" id="whoWeAre" style="padding-top: 80px">
-        <!-- Title Page Section  -->
-        <div
-          class="titlePage"
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-bottom"
-        >
-          <span>Who We Are ?</span>
+      <!-- Services Preview Section -->
+      <section class="servicesPreview">
+        <div class="sectionHeader" data-aos="fade-up">
+          <h2>Our Core Services</h2>
+          <p>
+            Comprehensive financial solutions designed to accelerate your
+            business growth
+          </p>
         </div>
-        <!-- Content Company Section  -->
-        <div class="contentSec">
-          <div class="leftSec" data-aos="fade-right">
+
+        <div class="servicesGrid">
+          <div class="serviceCard" data-aos="fade-up" data-aos-delay="100">
+            <div class="serviceIcon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3>Accounting & Compliance</h3>
             <p>
-              Accountiva is your forward-thinking partner for achieving clarity,
-              growth and strategic financial excellence. We combine deep
-              expertise with cutting-edge technology to deliver tailored
-              accounting services, innovative financial solutions, and strategic
-              business advisory to empower organizations To take the right
-              dissection.
+              Professional bookkeeping, financial statements, and regulatory
+              compliance services.
+            </p>
+            <a href="./Pages/services.html#core-services" class="serviceLink"
+              >Learn More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="serviceCard" data-aos="fade-up" data-aos-delay="200">
+            <div class="serviceIcon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Financial Advisory</h3>
+            <p>
+              Strategic financial guidance and risk management to protect and
+              grow your business.
+            </p>
+            <a href="./Pages/services.html#core-services" class="serviceLink"
+              >Learn More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="serviceCard" data-aos="fade-up" data-aos-delay="300">
+            <div class="serviceIcon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Business Growth</h3>
+            <p>
+              Comprehensive support for business expansion and performance
+              optimization.
+            </p>
+            <a href="./Pages/services.html#core-services" class="serviceLink"
+              >Learn More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="serviceCard" data-aos="fade-up" data-aos-delay="400">
+            <div class="serviceIcon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3>Partnership Services</h3>
+            <p>
+              Specialized services including forensic accounting and due
+              diligence.
+            </p>
+            <a href="./Pages/services.html#core-services" class="serviceLink"
+              >Learn More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section class="whyChooseUs">
+        <div class="sectionHeader" data-aos="fade-up">
+          <h2>Why Choose Accountiva?</h2>
+          <p>
+            We're more than just accountants - we're your strategic financial
+            partners
+          </p>
+        </div>
+
+        <div class="benefitsGrid">
+          <div class="benefitCard" data-aos="fade-right">
+            <div class="benefitIcon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>Expert Knowledge</h3>
+            <p>
+              Our certified professionals stay updated with the latest financial
+              regulations and best practices to serve you better.
             </p>
           </div>
-          <div class="rightSec" data-aos="fade-left">
-            <img src="./Images/account1.webp" loading="lazy" alt="photo" />
-          </div>
-        </div>
-        <div class="contentSec" style="margin-top: 50px">
-          <div class="leftSec" data-aos="fade-right">
-            <img src="./Images/account2.jpg" loading="lazy" alt="photo" />
-          </div>
-          <div class="rightSec" data-aos="fade-left">
+
+          <div class="benefitCard" data-aos="fade-up">
+            <div class="benefitIcon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3>Technology-Driven</h3>
             <p>
-              We believe financial precision is the cornerstone of success. Our
-              experienced team leverages expertise and technology to streamline
-              operations, optimize resources, and unlock sustainable growth.
-              From bookkeeping and tax strategy to financial planning and risk
-              management, we offer holistic support customized to your unique
-              goals.
+              We leverage cutting-edge accounting software and tools to deliver
+              efficient and accurate results.
+            </p>
+          </div>
+
+          <div class="benefitCard" data-aos="fade-left">
+            <div class="benefitIcon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Personalized Service</h3>
+            <p>
+              Every business is unique. We tailor our services to match your
+              specific industry needs and goals.
+            </p>
+          </div>
+
+          <div class="benefitCard" data-aos="fade-right" data-aos-delay="100">
+            <div class="benefitIcon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Timely Delivery</h3>
+            <p>
+              We understand deadlines matter. Count on us for punctual delivery
+              of all your financial reports and filings.
+            </p>
+          </div>
+
+          <div class="benefitCard" data-aos="fade-up" data-aos-delay="200">
+            <div class="benefitIcon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Data Security</h3>
+            <p>
+              Your financial information is protected with bank-level security
+              measures and strict confidentiality protocols.
+            </p>
+          </div>
+
+          <div class="benefitCard" data-aos="fade-left" data-aos-delay="300">
+            <div class="benefitIcon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3>24/7 Support</h3>
+            <p>
+              Questions don't follow business hours. Our support team is
+              available whenever you need assistance.
             </p>
           </div>
         </div>
-        <div class="contentSec">
-          <div class="leftSec" data-aos="fade-right">
-            <p>
-              Beyond numbers, we focus on building relationships. As trusted
-              advisors, we collaborate closely with clients to understand their
-              challenges, aspirations, and industry dynamics, ensuring our
-              solutions drive measurable impact,Accountiva isn’t just about
-              accounting; we’re about achieving your vision, Let us navigate the
-              complexities so you can focus on growing your business with
-              confidence.
-            </p>
+      </section>
+
+      <!-- About Us Section -->
+      <section class="aboutUsSection" id="whoWeAre">
+        <div class="sectionHeader" data-aos="fade-up">
+          <h2>About Accountiva</h2>
+          <p>
+            Your forward-thinking partner for financial excellence and business
+            growth
+          </p>
+        </div>
+
+        <div class="aboutContent">
+          <div class="aboutCard" data-aos="fade-right">
+            <div class="aboutText">
+              <h3>Our Mission</h3>
+              <p>
+                Accountiva is your forward-thinking partner for achieving
+                clarity, growth and strategic financial excellence. We combine
+                deep expertise with cutting-edge technology to deliver tailored
+                accounting services, innovative financial solutions, and
+                strategic business advisory to empower organizations to make the
+                right decisions.
+              </p>
+            </div>
+            <div class="aboutImage">
+              <img
+                src="./Images/account1.webp"
+                loading="lazy"
+                alt="Our Mission"
+              />
+            </div>
           </div>
-          <div class="rightSec" data-aos="fade-left">
-            <img src="./Images/account3.webp" loading="lazy" alt="photo" />
+
+          <div class="aboutCard reverse" data-aos="fade-left">
+            <div class="aboutText">
+              <h3>Our Approach</h3>
+              <p>
+                We believe financial precision is the cornerstone of success.
+                Our experienced team leverages expertise and technology to
+                streamline operations, optimize resources, and unlock
+                sustainable growth. From bookkeeping and tax strategy to
+                financial planning and risk management, we offer holistic
+                support customized to your unique goals.
+              </p>
+            </div>
+            <div class="aboutImage">
+              <img
+                src="./Images/account2.jpg"
+                loading="lazy"
+                alt="Our Approach"
+              />
+            </div>
+          </div>
+
+          <div class="aboutCard" data-aos="fade-right">
+            <div class="aboutText">
+              <h3>Our Commitment</h3>
+              <p>
+                Beyond numbers, we focus on building relationships. As trusted
+                advisors, we collaborate closely with clients to understand
+                their challenges, aspirations, and industry dynamics, ensuring
+                our solutions drive measurable impact. Accountiva isn't just
+                about accounting; we're about achieving your vision. Let us
+                navigate the complexities so you can focus on growing your
+                business with confidence.
+              </p>
+            </div>
+            <div class="aboutImage">
+              <img
+                src="./Images/account3.webp"
+                loading="lazy"
+                alt="Our Commitment"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="ctaSection">
+        <div class="ctaContent" data-aos="fade-up">
+          <h2>Ready to Transform Your Financial Management?</h2>
+          <p>
+            Join 500+ businesses that trust Accountiva for their financial
+            success. Get a free consultation and discover how we can help your
+            business thrive.
+          </p>
+          <div class="ctaButtons">
+            <a href="./Pages/contactUs.html" class="btn btn-primary">
+              <i class="fas fa-calendar-alt"></i> Schedule Free Consultation
+            </a>
+            <a href="tel:+9715016132" class="btn btn-secondary">
+              <i class="fas fa-phone"></i> Call Now: +971 501 6132
+            </a>
+          </div>
+          <div class="ctaFeatures">
+            <div class="ctaFeature">
+              <i class="fas fa-gift"></i>
+              <span>Free Initial Consultation</span>
+            </div>
+            <div class="ctaFeature">
+              <i class="fas fa-clock"></i>
+              <span>Quick Response Time</span>
+            </div>
+            <div class="ctaFeature">
+              <i class="fas fa-award"></i>
+              <span>Certified Professionals</span>
+            </div>
           </div>
         </div>
       </section>
@@ -470,10 +801,10 @@
           <div class="quickLinksSec">
             <div class="title">Quick Links</div>
             <div class="content">
-              <a href="/">Home</a>
-              <a href="./Pages/aboutUs.html">About Us</a>
-              <a href="./Pages/services.html">Service</a>
-              <a href="./Pages/contactUs.html">Contact Us</a>
+              <a href="index.html">Home</a>
+              <a href="Pages/aboutUs.html">About Us</a>
+              <a href="Pages/services.html">Services</a>
+              <a href="Pages/contactUs.html">Contact Us</a>
             </div>
           </div>
 
